@@ -83,3 +83,28 @@ img {
 .navbar .logo {
     font-weight: 400;
 }
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+ /* Hero */
+ .hero::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url('../imgs/group-working-laptops-desk.jpg') center center/cover;
+    opacity: 0.4;
+    z-index: -1;
+    position: absolute;
+ }
+
+ .hero .content {
+    font-size: 2rem;
+    text-align: center;
+ }
+ .hero .content a {
+    color:#28a745
+ }
