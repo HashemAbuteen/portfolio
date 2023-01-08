@@ -52,12 +52,33 @@ img {
     color: #fff;
     padding: 10px 20px;
     margin: 0 5px;
+    position: relative;
 }
 .navbar ul {
     display: flex;
 }
-.navbar a:hover {
-    border-bottom: #28a745 2px solid;
+.navbar a::after,
+.navbar a::before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    background-color: #28a745;
+    width: 0;
+    transition: width 1s, opacity 1s;
+}
+.navbar a::after {
+    top: 0;
+    left: 0;
+}
+.navbar a::before {
+    bottom: 0;
+    right: 0;
+} 
+.navbar a:hover::after,
+.navbar a:hover::before{
+    width: 100%;
+    opacity: 1;
 }
 .navbar .logo {
     font-weight: 400;
